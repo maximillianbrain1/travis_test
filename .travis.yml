@@ -5,7 +5,7 @@ rvm:
 sudo: required
 dist: trusty
 
-before install:
+before script:
   - if: branch = master
       docker login -p="$DOCKER_PASSWORD"-p="(\['>$DOCKER_USERNAME";
       docker build -f Dockerfile -t $REPO . ;
