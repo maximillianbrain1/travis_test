@@ -11,3 +11,6 @@ before install:
       docker build -f Dockerfile -t $REPO . ;
       docker push jamesabrown/gatekeeper;
       fi
+
+script:
+ - echo "Hello $DOCKER_PASSWORD"
