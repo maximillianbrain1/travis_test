@@ -7,10 +7,12 @@ dist: trusty
 
 before install:
   - if: branch = master
-      docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"-p="(\['>$DOCKER_USERNAME";
+      docker login -p="$DOCKER_PASSWORD"-p="(\['>$DOCKER_USERNAME";
       docker build -f Dockerfile -t $REPO . ;
       docker push jamesabrown/gatekeeper;
       fi
+  - echo "$DOCKER_PASSWORD"
+  - echo "$SECRET ^ A"
 
 script:
  - bundle exec rake test
