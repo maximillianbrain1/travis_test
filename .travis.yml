@@ -13,4 +13,4 @@ before install:
       fi
 
 script:
- - echo "Hello $DOCKER_PASSWORD"
+ - bundle exec rake test
